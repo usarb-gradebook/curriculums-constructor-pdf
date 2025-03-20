@@ -2,6 +2,58 @@
   text-align: center;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.curiculum-container-center {
+  padding-top: 254px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.authors {
+  padding-top: 77px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.authors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.athors-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,7 +91,7 @@
 }
 
 .pdf-preview-style {
-  width: 850px;
+  width: 702px;
   margin: 40px auto;
   background: white;
   padding: 70px 50px;
@@ -58,14 +110,28 @@
 
 .editable {
   background-color: yellow;
+  border: 1px solid #efac00;
   display: inline-block;
   padding: 2px 4px;
   cursor: text;
+  border-radius: 4px;
+  max-width: 700px;
+}
+
+.city-container {
+  padding-top: 204px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-  display: block;
-  margin: 40px auto 0;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;

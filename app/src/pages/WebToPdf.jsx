@@ -1,9 +1,9 @@
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
-import Times from '../components/times.ttf';
-import Timesbd from '../components/timesbd.ttf';
-import Timesi from '../components/timesi.ttf';
-import Timesbi from '../components/timesbi.ttf';
+import Times from '../fonts/times.ttf';
+import Timesbd from '../fonts/timesbd.ttf';
+import Timesi from '../fonts/timesi.ttf';
+import Timesbi from '../fonts/timesbi.ttf';
 
 Font.register({
     family: 'Times',
