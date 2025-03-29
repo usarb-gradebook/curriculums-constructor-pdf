@@ -1,4 +1,5 @@
 import React from "react";
+import teacherImage from "./teacherImage.png";
 import { useState } from "react";
 import "../App.css";
 
@@ -22,6 +23,15 @@ const Page3 = () => {
     studyMode: "Învățământ cu frecvență",
     typeCourse: "Obligatorie",
     categoryFormat: "De orientare spre o specialitate",
+    infoSectionTeacher:
+      "Titularul cursului: Sergiu CHILAT, asist. univ., la Catedra de matematică și informatică. A absolvit Universitatea de Stat ”Alecu Russo” din Bălți, specialitatea „Matematică și informatică”. A obținut titlul de magistru în Informatică la Universitatea de Stat „Alecu Russo” din Bălţi. ",
+    sienceType: "Tehnologii web",
+    officceTeacher:
+      "Sala de calculatoare 545, Catedra de matematică și informatică",
+    phoneTeacher: "0-231-52-3-94; 0-231-52-4-88",
+    emailTeacher: "chilat.sergiu@usarb.md",
+    consultationHours:
+      "Miercuri 15:00-16:30. Consultațiile se oferă în incinta universității și pe e-mail.",
   });
 
   const EditInformation = (key, value) => {
@@ -86,7 +96,6 @@ const Page3 = () => {
         </span>
       </p>
       <p className="bold">Administrarea unității de curs</p>
-      <h1>Curriculum</h1>
       {/*Table*/}
       <table>
         <tr>
@@ -227,7 +236,7 @@ const Page3 = () => {
           suppressContentEditableWarning
           onBlur={(e) => EditInformation("typeCourse", e.target.innerText)}
         >
-          {DocsInfo.courseType}
+          {DocsInfo.typeCourse}
         </span>
       </p>
       <p className="bold">
@@ -241,6 +250,107 @@ const Page3 = () => {
           {DocsInfo.categoryFormat}
         </span>
       </p>
+      {/*Image Segment*/}
+      <p className="bold">Informaţii referitoare la cadrele didactice</p>
+      <div class="container">
+        <div>
+          <img src={teacherImage} alt="Descriere imagine" />
+          
+        </div>
+        <div>
+          <p>
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("infoSectionTeacher", e.target.innerText)
+                }
+              >
+                {DocsInfo.infoSectionTeacher}
+              </span>
+            </span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Domeniul de interes științific: {""}
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("sienceType", e.target.innerText)
+                }
+              >
+                {DocsInfo.sienceType}
+              </span>
+            </span>
+          </p>
+          <p>
+            Biroul: {""}
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("officceTeacher", e.target.innerText)
+                }
+              >
+                {DocsInfo.officceTeacher}
+              </span>
+            </span>
+          </p>
+          <p>
+            Telefon: {""}
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("phoneTeacher", e.target.innerText)
+                }
+              >
+                {DocsInfo.phoneTeacher}
+              </span>
+            </span>
+          </p>
+          <p>
+            E-mail: {""}
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("emailTeacher", e.target.innerText)
+                }
+              >
+                {DocsInfo.emailTeacher}
+              </span>
+            </span>
+          </p>
+          <p>
+            Orele de consultaţii: {""}
+            <span>
+              <span
+                className="editable underline"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) =>
+                  EditInformation("consultationHours:", e.target.innerText)
+                }
+              >
+                {DocsInfo.consultationHours}
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

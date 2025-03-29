@@ -109,15 +109,19 @@ h5 {
 }
 
 .editable {
-  background-color: #d7ebff;
-  border: 1px solid #16518d;
+  background-color: #e0e7ff;
+  border: 1px solid #2d60ff;
   display: inline-block;
-  padding: 2px 4px;
+  padding: 2px 2px;
   cursor: text;
   border-radius: 4px;
   max-width: 700px;
 }
-
+.editable:focus {
+  outline: none;
+  border: 1px solid #2956e6;
+  background-color: #e0e7ff;
+}
 .city-container {
   padding-top: 204px;
   display: flex;
@@ -187,4 +191,38 @@ td {
 
 th {
   background-color: #f2f2f2;
+}
+/* Image Container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto;
+  row-gap: 15px;
+  column-gap: 5px;
+  align-items: start;
+}
+
+.container div:nth-child(1) {
+  grid-area: img;
+}
+
+.container div:nth-child(2) {
+  grid-area: text;
+}
+
+.container div:nth-child(3) {
+  grid-area: info;
+  grid-column: span 2;
+}
+
+.container {
+  grid-template-areas:
+    "img text"
+    "info info";
+}
+
+.container img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
 }
