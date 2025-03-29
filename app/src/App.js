@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CurriculumTable from "./CurriculumTable";
+import Page3 from "./pages/Page3";
 import { pdf } from "@react-pdf/renderer";
 import WebToPdf from "../src/pages/WebToPdf";
 import "./App.css";
@@ -338,67 +338,7 @@ function App() {
       </div>
       {/* Page 3 */}
       <hr className="page-break" />
-      <div className="title-container">
-        <p className="bold">Informaţii de identificare a unității de curs</p>
-        <p className="bold">
-          Facultatea:{" "}
-          <span
-            className="editable underline"
-            contentEditable
-            suppressContentEditableWarning
-            onBlur={(e) => EditInformation("facultySmall", e.target.innerText)}
-          >
-            {DocsInfo.facultySmall}
-          </span>
-        </p>
-        <p className="bold">
-          Catedra:{" "}
-          <span
-            className="editable underline"
-            contentEditable
-            suppressContentEditableWarning
-            onBlur={(e) => EditInformation("department", e.target.innerText)}
-          >
-            {DocsInfo.department}
-          </span>
-        </p>
-        <p className="bold">
-          Codul și denumirea domeniului general de studiu:{" "}
-          <span
-            className="editable underline"
-            contentEditable
-            suppressContentEditableWarning
-            onBlur={(e) => EditInformation("nameCourse", e.target.innerText)}
-          >
-            {DocsInfo.nameCourse}
-          </span>
-        </p>
-        <p className="bold">
-          Codul și denumirea domeniului de formare profesională:{" "}
-          <span
-            className="editable underline"
-            contentEditable
-            suppressContentEditableWarning
-            onBlur={(e) => EditInformation("nameTraining", e.target.innerText)}
-          >
-            {DocsInfo.nameTraining}
-          </span>
-        </p>
-        <p className="bold">
-          Codul și denumirea specialității:{" "}
-          <span
-            className="editable underline"
-            contentEditable
-            suppressContentEditableWarning
-            onBlur={(e) => EditInformation("specialitate", e.target.innerText)}
-          >
-            {DocsInfo.specialitate}
-          </span>
-        </p>
-        <p className="bold">Administrarea unității de curs</p>
-        <h1>Curriculum</h1>
-        <CurriculumTable />
-      </div>
+      <Page3 />
       <button onClick={GeneratePDF}>Descarcă PDF</button>
     </div>
   );

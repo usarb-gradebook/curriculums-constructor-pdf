@@ -118,6 +118,25 @@ const PdfDocument = ({ data }) => (
         Decanul {data.nameFaculty} ______________ {data.nameDecan}
       </Text>
     </Page>
+    <Page style={styles.page} size="A4">
+      <Text style={styles.title}>
+        Informaţii de identificare a unității de curs
+      </Text>
+      <Text style={styles.text}>Facultatea: {data.facultySmall}</Text>
+      <Text style={styles.text}>Catedra: {data.department}</Text>
+      <Text style={styles.text}>
+        Codul și denumirea domeniului general de studiu: {data.nameCourse}
+      </Text>
+      <Text style={styles.text}>
+        Codul și denumirea domeniului de formare profesională:{" "}
+        {data.nameTraining}
+      </Text>
+      <Text style={styles.text}>
+        Codul și denumirea specialității: {data.specialitate}
+      </Text>
+      <Text style={styles.title}>Administrarea unității de curs</Text>
+      <Text style={styles.text}>Curriculum</Text>
+    </Page>
   </Document>
 );
 
