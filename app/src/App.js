@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
+import Page5 from "./pages/Page5";
 import { pdf } from "@react-pdf/renderer";
 import WebToPdf from "../src/pages/WebToPdf";
 import "./App.css";
@@ -339,6 +341,12 @@ function App() {
       {/* Page 3 */}
       <hr className="page-break" />
       <Page3 />
+      {/* Page 4 */}
+      <hr className="page-break" />
+      <Page4 />
+      {/* Page 5 */}
+      <hr className="page-break" />
+      <Page5 />
       <button onClick={GeneratePDF}>Descarcă PDF</button>
     </div>
   );

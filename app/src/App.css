@@ -226,3 +226,26 @@ th {
   height: auto;
   border-radius: 5px;
 }
+
+/* chapter-div */
+.chapter-container {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+}
+
+.chapter-item {
+  display: contents;
+}
+
+.chapter-item p:first-child {
+  /* Title */
+  font-weight: bold;
+  grid-column: 1;
+}
+
+.chapter-item p:last-child {
+  /* Info */
+  grid-column: 2;
+}
