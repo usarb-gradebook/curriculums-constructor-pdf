@@ -355,6 +355,7 @@ function App() {
       {/* Page 7 */}
       <hr className="page-break" />
       <Page7 />
+      {/* Test */}
       <button onClick={GeneratePDF}>Descarcă PDF</button>
     </div>
   );
